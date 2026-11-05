@@ -3,9 +3,14 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Praise & Lithiya | Bethrothal Invitation',
+  description: 'Join Praise and Lithiya as they celebrate their bethrothal day in Chemperi on 30 November 2026.',
   generator: 'v0.app',
+  openGraph: {
+    title: 'Praise & Lithiya | Bethrothal Invitation',
+    description: 'Together with their families, they joyfully invite you to celebrate the beginning of their forever.',
+    type: 'website',
+  },
   icons: {
     icon: [
       {
