@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Praise & Lithiya | Bethrothal Invitation',
-  description: 'Join Praise and Lithiya as they celebrate their bethrothal day in Chemperi on 30 November 2026.',
+  description: 'Join Praise and Lithiya as they celebrate their bethrothal day at St. Jude’s Church, Nedumunda, Edoor on 28 November 2026.',
   generator: 'v0.app',
   openGraph: {
     title: 'Praise & Lithiya | Bethrothal Invitation',
