@@ -14,10 +14,10 @@ import {
 const wedding = {
   bride: 'Dr. Praise Jose',
   groom: 'Dr. Lithiya Scaria',
-  date: '30 November 2026',
-  shortDate: '30.11.2026',
-  isoDate: '2026-11-30T10:30:00+05:30',
-  location: 'Our Lady of Lourdes Basilica, Chemperi',
+  date: '28 November 2026',
+  shortDate: '28.11.2026',
+  isoDate: '2026-11-28T11:30:00+05:30',
+  location: "St. Jude’s Church, Nedumunda, Edoor",
   message: 'Together with their families, they joyfully invite you to celebrate the beginning of their forever.',
 }
 
@@ -38,8 +38,8 @@ const story = [
 ]
 
 const events = [
-  { name: 'Bethrothal Ceremony', date: 'Monday, 30 November 2026', time: '10:30 AM', place: 'Our Lady of Lourdes Basilica', address: 'Chemperi, Kerala', url: 'https://www.google.com/maps/search/?api=1&query=Our+Lady+of+Lourdes+Basilica+Chemperi', icon: Sparkles },
-  { name: 'Reception', date: 'Monday, 30 November 2026', time: '12:30 PM onwards', place: 'Mother Theresa Auditorium', address: 'Google Maps', url: 'https://www.google.com/maps/search/?api=1&query=Mother+Theresa+Auditorium', icon: Heart },
+  { name: 'Bethrothal Ceremony', date: 'Saturday, 28 November 2026', time: '11:30 AM', place: "St. Jude’s Church", address: 'Nedumunda, Edoor', url: 'https://www.google.com/maps/search/?api=1&query=St.+Jude%27s+Church+Nedumunda+Edoor', icon: Sparkles },
+  { name: 'Reception', date: 'Saturday, 28 November 2026', time: 'Followed by ceremony', place: 'Domus Sebastiani Convention Hall', address: 'Velimanam, Iritty', url: 'https://www.google.com/maps/search/?api=1&query=Domus+Sebastiani+Convention+Hall+Velimanam+Iritty', icon: Heart },
 ]
 
 function Countdown() {
@@ -102,12 +102,12 @@ export default function Page() {
 
       <section className="countdown-band"><p>Counting down to our day</p><Countdown /></section>
 
-      <section className="ceremony-info" aria-labelledby="ceremony-info-title"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-wZPdR8jVVdtkOBjuwr0kjqpt7z0oc6.png" alt="Ceremony information for Dr. Praise Jose and Dr. Lithiya Scaria" /><h2 id="ceremony-info-title" className="sr-only">Ceremony info</h2></section>
+      <section className="ceremony-info" aria-labelledby="ceremony-info-title"><h2 id="ceremony-info-title">Ceremony Info</h2><div className="parents-grid"><div className="parent-detail"><p>Mr. &amp; Mrs.</p><strong>Scaria N S</strong><strong>Leelamma Scaria</strong><span>Njamattholi House Velimanam Iritty</span></div><div className="ceremony-emblem" aria-hidden="true"><Heart size={42} fill="currentColor" /></div><div className="parent-detail"><p>Mr. &amp; Mrs.</p><strong>Jose T A</strong><strong>Thresiamma Joseph</strong><span>Thundiparambil House Chemperi</span></div></div><p className="announcement">We joyfully announce<br />the bethrothal of our children</p><div className="children-names"><strong>Dr. Lithiya Scaria</strong><span>&amp;</span><strong>Dr. Praise Jose</strong></div></section>
 
       <section id="events" className="events section-shell"><div className="section-heading"><p className="eyebrow">Join us as we celebrate</p><p>Two moments, one beautiful beginning.</p></div><div className="event-grid">{events.map((event) => { const Icon = event.icon; return <article className="event-card" key={event.name}><Icon className="event-icon" /><p className="eyebrow">{event.name}</p><h3>{event.date}</h3><div className="event-meta"><span><Clock3 />{event.time}</span><span><MapPin />{event.place}</span></div><p>{event.address}</p><a href={event.url} target="_blank" rel="noreferrer">View venue details <ChevronRight /></a></article> })}</div></section>
 
 
-      <footer><div className="footer-mark">P <Heart size={14} fill="currentColor" /> L</div><p>With love, Praise &amp; Lithiya</p><small>30 November 2026 · Chemperi</small></footer>
+      <footer><div className="footer-mark">P <Heart size={14} fill="currentColor" /> L</div><p>With love, Praise &amp; Lithiya</p><small>28 November 2026 · Edoor</small></footer>
 
     </main>
   )
@@ -122,5 +122,5 @@ function Opening({ onOpen }: { onOpen: () => void }) {
     onOpen()
   }
 
-  return <main className="opening"><div className="opening-flower flower-left">❧</div><div className="opening-flower flower-right">❧</div><div className="invitation-card"><p className="eyebrow">The bethrothal celebration of</p><div className="opening-monogram">P <Heart size={18} fill="currentColor" /> L</div><h1>Praise <em>&amp;</em> Lithiya</h1><div className="ornament">◇</div><p className="opening-date">30 · 11 · 2026</p><p className="opening-location">Our Lady of Lourdes Basilica<br />Chemperi</p><button className="open-button" onClick={handleOpen} disabled={isOpening} aria-busy={isOpening}>{isOpening ? 'Opening invitation' : 'Open invitation'} <ArrowDown /></button></div></main>
+  return <main className="opening"><div className="opening-flower flower-left">❧</div><div className="opening-flower flower-right">❧</div><div className="invitation-card"><p className="eyebrow">The bethrothal celebration of</p><div className="opening-monogram">P <Heart size={18} fill="currentColor" /> L</div><h1>Praise <em>&amp;</em> Lithiya</h1><div className="ornament">◇</div><p className="opening-date">28 · 11 · 2026</p><p className="opening-location">St. Jude’s Church<br />Nedumunda, Edoor</p><button className="open-button" onClick={handleOpen} disabled={isOpening} aria-busy={isOpening}>{isOpening ? 'Opening invitation' : 'Open invitation'} <ArrowDown /></button></div></main>
 }
